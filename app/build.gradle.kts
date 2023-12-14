@@ -43,5 +43,8 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
     implementation("com.github.xabaras:RecyclerViewSwipeDecorator:1.4")
+    implementation("com.android.volley:volley:1.2.0")
+    
+
 
 }

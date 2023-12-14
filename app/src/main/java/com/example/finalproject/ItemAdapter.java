@@ -24,7 +24,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         return new ViewHolder(itemView);
     }
 
-    @Override
+    @Override // 아이템이 여러개이면 밑으로 드래그 시에 애니메이션 동작
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
         if(viewHolder.getAdapterPosition() > lastPosition) {
             Animation animation = AnimationUtils.loadAnimation(context,R.anim.slide_in_row);
@@ -36,7 +36,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
     public void addItem(Item item) {
         items.add(item);
-    }
+    } // 아이템 추가
     public void addItem(int position, Item item){
         items.add(position, item);
     }
@@ -56,19 +56,19 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         return items.size();
     }
 
+    // 추가한 지역명을 표시
     static class ViewHolder extends RecyclerView.ViewHolder {
         TextView title_view;
-        TextView description;
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             title_view = itemView.findViewById(R.id.title_text);
-            description = itemView.findViewById(R.id.desc_text);
+
         }
         public void setItem(Item item){
             title_view.setText(item.getTitle());
-            description.setText(item.getDescription());
         }
 
     }

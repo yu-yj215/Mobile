@@ -1,37 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:id="@+id/swiperefresh">
     <LinearLayout
+        android:id="@+id/background"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-        <Button
-            android:id="@+id/refresh"
-            android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#00A9FF">
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+            <Button
+                android:id="@+id/refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_reload"
+                android:fontFamily="@font/lineseed_kr_bd" />
+
+            <TextView
+                android:id="@+id/sidoname"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/lineseed_kr_bd"
+                android:gravity="center"
+                android:text="서울"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+            <Button
+                android:id="@+id/newView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:fontFamily="@font/lineseed_kr_bd" />
+            </LinearLayout>
+        <TextView
+            android:id="@+id/datatime"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
             android:layout_weight="1"
-            android:layout_marginEnd="80dp"
-            android:text="새로고침" />
-        <Button
-            android:id="@+id/newView"
-            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="0000- 00-00 00:00"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/PM10"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
+            android:gravity="center"
             android:layout_weight="1"
-            android:text="+" />
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="미세먼지"
+            android:fontFamily="@font/lineseed_kr_bd"
+            android:background="@drawable/rounded_corner_bg"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:padding="10dp" />
+        <TextView
+            android:id="@+id/PM2_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="초미세먼지"
+            android:fontFamily="@font/lineseed_kr_bd"
+            android:background="@drawable/rounded_corner_bg"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:padding="10dp"/>
+        <TextView
+            android:id="@+id/NO2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="이산화질소"
+            android:fontFamily="@font/lineseed_kr_bd"
+            android:background="@drawable/rounded_corner_bg"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:padding="10dp"/>
+        <TextView
+            android:id="@+id/O3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="오존"
+            android:fontFamily="@font/lineseed_kr_bd"
+            android:background="@drawable/rounded_corner_bg"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:padding="10dp"/>
+        <TextView
+            android:id="@+id/CO"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="일산화탄소"
+            android:fontFamily="@font/lineseed_kr_bd"
+            android:background="@drawable/rounded_corner_bg"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:padding="10dp"/>
+        <TextView
+            android:id="@+id/SO2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="아황산가스"
+            android:fontFamily="@font/lineseed_kr_bd"
+            android:background="@drawable/rounded_corner_bg"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:padding="10dp"/>
     </LinearLayout>
-    <TextView
-        android:id="@+id/PM10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Hello World!" />
-    <TextView
-        android:id="@+id/PM2.5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="ㅁㄴㅇㅁㄴㅇ" />
-</LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
