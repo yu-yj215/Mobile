@@ -21,7 +21,7 @@ import com.android.volley.RequestQueue;
 
 public class MainActivity extends AppCompatActivity implements DustFragment.fragmentCallback,ItemFragment.fragmentCallback {
     String baseUrl = "https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty"; // API
-    String serviceKey = "v7fPxBO6xG%2F%2B%2BgKwnQdQqzdZE%2BahHvJg%2BqTRr5AZSXy1f8hivxYEb7cvNiWr4L78O0TSYtjOjlZsyks714kdeg%3D%3D"; // 공개 키
+    String serviceKey = "비공개"; // 공개 키
     int numOfRows = 1;
     // API 요청용
     int pageNo = 1;
